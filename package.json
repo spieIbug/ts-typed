@@ -1,0 +1,27 @@
+{
+  "name": "typed",
+  "version": "1.0.0",
+  "description": "A lightweight library that add typing at runtime for typescript projects",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/technoSofTeam/typed.git"
+  },
+  "keywords": [
+    "runtime",
+    "typing",
+    "typescript",
+    "angular",
+    "typed"
+  ],
+  "author": "Maamar Yacine MEDDAH <my.meddah@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/technoSofTeam/typed/issues"
+  },
+  "homepage": "https://github.com/technoSofTeam/typed#readme"
+}
