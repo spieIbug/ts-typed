@@ -3,6 +3,8 @@ Typed is a lighweight library that aims to add typings at runtime.
 
 # How to use it
 
+Install using npm `$ npm install ts-typed --save` or using `$ yarn add ts-typed --save`
+
 - Using TypedFactory.create(data, Model) allows you to return data in a given Model structure
 
 - Using @Typed decorator. Example :
