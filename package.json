@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/technoSofTeam/typed/issues"
   },
-  "homepage": "https://github.com/technoSofTeam/typed#readme"
+  "homepage": "https://github.com/technoSofTeam/typed#readme",
+  "dependencies": {
+    "@angular/core": "^5.0.0"
+  }
 }
