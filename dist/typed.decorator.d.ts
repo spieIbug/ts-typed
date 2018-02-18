@@ -1,4 +1,4 @@
-import { Type } from '@angular/core';
+import { Model } from './typed.model';
 /**
  * @Typed is a property decorator, takes a model as param. generates typed getter and setter
  *
@@ -13,4 +13,4 @@ import { Type } from '@angular/core';
  *
  * @author: Maamar Yacine MEDDAH <my.meddah@gmail.com>
  */
-export default function Typed(model: Type<Object>): (target: Object, property: string) => void;
+export default function Typed(model: Model<Object>): (target: Object, property: string) => void;

@@ -1,6 +1,6 @@
 {
   "name": "ts-typed",
-  "version": "1.0.2",
+  "version": "1.2.0",
   "description": "A lightweight library that add typing at runtime for typescript projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/technoSofTeam/typed.git"
+    "url": "git+https://github.com/technosofteam/ts-typed.git"
   },
   "keywords": [
     "runtime",
@@ -23,8 +23,5 @@
   "bugs": {
     "url": "https://github.com/technoSofTeam/typed/issues"
   },
-  "homepage": "https://github.com/technoSofTeam/typed#readme",
-  "dependencies": {
-    "@angular/core": "^5.0.0"
-  }
+  "homepage": "https://github.com/technoSofTeam/typed#readme"
 }

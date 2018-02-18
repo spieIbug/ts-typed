@@ -1,5 +1,5 @@
 import {TypedFactory} from './typed.factory';
-import {Type} from '@angular/core';
+import {Model} from './typed.model';
 
 /**
  * @Typed is a property decorator, takes a model as param. generates typed getter and setter
@@ -15,7 +15,7 @@ import {Type} from '@angular/core';
  *
  * @author: Maamar Yacine MEDDAH <my.meddah@gmail.com>
  */
-export default function Typed(model: Type<Object>) {
+export default function Typed(model: Model<Object>) {
     return (target: Object, property: string) => {
         // define another attribute (private) in order to avoid stackoverflow
         Object.defineProperty(target, '_' + property, {

@@ -11,17 +11,26 @@ Install using npm `$ npm install ts-typed --save` or using `$ yarn add ts-typed 
 ```
 import Typed from 'typed';
 
-export class AddressModel extends AbstractTypedModel {
-  city: string;
-  zip: string;
-  street: string;
+abstract class AbstractTypedModel{
 
-  constructor(parameters: Partial<AddressModel>) {
+}
+
+export class AccountModel extends AbstractTypedModel {
+
+  id: string;
+  uri: string;
+  username: string;
+  provider: string;
+  avatar: string;
+
+  constructor(parameters: Partial<AccountModel>) {
     super();
-    const {city, zip, street} = parameters;
-    this.city = city;
-    this.zip = zip;
-    this.street = street;
+    const {id, uri, username, provider, avatar} = parameters;
+    this.id = id;
+    this.uri = uri;
+    this.username = username;
+    this.provider = provider;
+    this.avatar = avatar;
   }
 }
 
@@ -31,20 +40,21 @@ export class PersonModel {
   lastname: string;
   firstname: string;
 
-  @Typed(AddressModel)
-  address: AddressModel;
+  @Typed(AccountModel)
+  account: AccountModel;
 
   constructor(parameters: Partial<PersonModel>) {
-    const {id, lastname, firstname, address} = parameters;
+    const {id, lastname, firstname, account} = parameters;
     this.id = id;
     this.lastname = lastname;
     this.firstname = firstname;
-    this.address = address; // the address here will not be the param directly, but the typed setter
+    this.account = account;
   }
 
-  doSomething(): void {
-    console.log('PersonModel : ', this);
+  whatIsYourName(): void {
+    console.log('A girl has no name');
   }
 }
 ```
+![Console capture](typing-console-capture.png)
 Using this way, you'll be sure to get the model at runtime, and then call method, get subtypes, etc.
