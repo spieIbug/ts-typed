@@ -21,7 +21,7 @@ export default function Typed(model: Type<Object>) {
         Object.defineProperty(target, '_' + property, {
             writable: true,
             value: target[property]
-        })
+        });
         // define getter and setter, for the property that point on the private attribute freshly defined
         Object.defineProperty(target, property, {
             get: function () {

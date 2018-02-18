@@ -1,4 +1,6 @@
-var typed_factory_1 = require('./typed.factory');
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var typed_factory_1 = require("./typed.factory");
 /**
  * @Typed is a property decorator, takes a model as param. generates typed getter and setter
  *

@@ -1,5 +1,4 @@
 import {Type} from '@angular/core';
-
 /**
  * This factory aims to create a typed object for a given data (Array, or object), and model
  *
@@ -14,7 +13,7 @@ export abstract class TypedFactory {
      */
     static create<T>(data: any, model: Type<T>): T | T[] {
         if (Array.isArray(data)) {
-            const response: T[] = [];
+            let response: T[] = [];
             for (let i = 0; i < data.length; i++) {
                 response.push(new model(data[i]));
             }
