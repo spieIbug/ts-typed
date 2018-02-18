@@ -1,6 +1,6 @@
 {
-  "name": "typed",
-  "version": "1.0.0",
+  "name": "ts-typed",
+  "version": "1.0.1",
   "description": "A lightweight library that add typing at runtime for typescript projects",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
