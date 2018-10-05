@@ -1,11 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-/**
- * This factory aims to create a typed object for a given data (Array, or object), and model
- *
- * @author: Maamar Yacine MEDDAH <my.meddah@gmail.com>
- */
-var TypedFactory = /** @class */ (function () {
+abstract;
+var TypedFactory = (function () {
     function TypedFactory() {
     }
     /**
@@ -15,6 +9,9 @@ var TypedFactory = /** @class */ (function () {
      * @returns {T | T[]}
      */
     TypedFactory.create = function (data, model) {
+        if (data === undefined || data === null) {
+            return data;
+        }
         if (Array.isArray(data)) {
             var response = [];
             for (var i = 0; i < data.length; i++) {
@@ -25,5 +22,4 @@ var TypedFactory = /** @class */ (function () {
         return new model(data);
     };
     return TypedFactory;
-}());
-exports.TypedFactory = TypedFactory;
+})();
