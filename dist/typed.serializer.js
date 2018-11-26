@@ -6,7 +6,7 @@ class TypedSerializer {
      * @param obj
      * @returns {{}&U}
      */
-    serialize(obj) {
+    static serialize(obj) {
         const serialized = Object.assign({}, obj);
         const props = Object.getOwnPropertyNames(serialized);
         props.filter(prop => prop.startsWith('_')).map(prop => {

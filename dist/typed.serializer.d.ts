@@ -4,5 +4,5 @@ export declare abstract class TypedSerializer {
      * @param obj
      * @returns {{}&U}
      */
-    serialize(obj: any): any;
+    static serialize<T>(obj: T): T;
 }
