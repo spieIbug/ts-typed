@@ -1,4 +1,6 @@
-var typed_factory_1 = require('./typed.factory');
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const typed_factory_1 = require("./typed.factory");
 /**
  * @Typed is a property decorator, takes a model as param. generates typed getter and setter
  *
@@ -14,7 +16,7 @@ var typed_factory_1 = require('./typed.factory');
  * @author: Maamar Yacine MEDDAH <my.meddah@gmail.com>
  */
 function Typed(model) {
-    return function (target, property) {
+    return (target, property) => {
         // define another attribute (private) in order to avoid stackoverflow
         Object.defineProperty(target, '_' + property, {
             writable: true,
