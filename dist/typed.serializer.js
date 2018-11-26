@@ -1,13 +1,20 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 class TypedSerializer {
+    /**
+     * Use this method to remove underscore "_" from prop when serializing Typed Object
+     * @param obj
+     * @returns {{}&U}
+     */
     serialize(obj) {
-        const props = Object.getOwnPropertyNames(obj);
+        const serialized = Object.assign({}, obj);
+        const props = Object.getOwnPropertyNames(serialized);
         props.filter(prop => prop.startsWith('_')).map(prop => {
             const newName = prop.substring(1, prop.length);
-            Object.defineProperty(obj, newName, Object.getOwnPropertyDescriptor(obj, prop));
-            delete obj[prop];
+            Object.defineProperty(serialized, newName, Object.getOwnPropertyDescriptor(serialized, prop));
+            delete serialized[prop];
         });
+        return serialized;
     }
 }
 exports.TypedSerializer = TypedSerializer;
