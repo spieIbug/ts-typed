@@ -4,7 +4,7 @@ export abstract class TypedSerializer {
      * @param obj
      * @returns {{}&U}
      */
-    serialize(obj: any): any {
+    static serialize<T>(obj: T): T {
         const serialized = Object.assign({}, obj);
         const props: string[] = Object.getOwnPropertyNames(serialized);
         props.filter(prop => prop.startsWith('_')).map(prop => {
