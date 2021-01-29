@@ -10,6 +10,7 @@
 </pre>
 [![codecov](https://codecov.io/gh/meyacine/ts-typed/branch/master/graph/badge.svg)](https://codecov.io/gh/meyacine/ts-typed)
 [![Build Status](https://travis-ci.com/meyacine/ts-typed.svg?branch=master)](https://travis-ci.com/meyacine/ts-typed)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmeyacine%2Fts-typed.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmeyacine%2Fts-typed?ref=badge_shield)
 # Description
 Typed is a lighweight library that aims to add typings at runtime.
 
@@ -86,3 +87,7 @@ export class PersonModel {
 ```
 ![Console capture](typing-console-capture.png)
 Using this way, you'll be sure to get the model at runtime, and then call method, get subtypes, etc.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fmeyacine%2Fts-typed.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fmeyacine%2Fts-typed?ref=badge_large)
