@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TypedSerializer = void 0;
 class TypedSerializer {
     /**
      * Use this method to remove underscore "_" from prop when serializing Typed Object

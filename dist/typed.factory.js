@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.TypedFactory = void 0;
 /**
  * This factory aims to create a typed object for a given data (Array, or object), and model
  *
