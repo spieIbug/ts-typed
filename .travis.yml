@@ -1,6 +1,7 @@
 language: node_js
 sudo: false
-node_js: node
+node_js:
+  - 16
 
 install:
   - npm uninstall typescript --no-save
