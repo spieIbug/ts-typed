@@ -1,4 +1,6 @@
-import { TypedFactory } from './typed.factory';
+"use strict";
+exports.__esModule = true;
+var typed_factory_1 = require("./typed.factory");
 /**
  * @Typed is a property decorator, takes a model as param. generates typed getter and setter
  *
@@ -13,8 +15,8 @@ import { TypedFactory } from './typed.factory';
  *
  * @author: Maamar Yacine MEDDAH <my.meddah@gmail.com>
  */
-export default function Typed(model) {
-    return (target, property) => {
+function Typed(model) {
+    return function (target, property) {
         // define another attribute (private) in order to avoid stackoverflow
         Object.defineProperty(target, '_' + property, {
             writable: true,
@@ -26,8 +28,9 @@ export default function Typed(model) {
                 return this['_' + property];
             },
             set: function (value) {
-                this['_' + property] = TypedFactory.create(value, model);
+                this['_' + property] = typed_factory_1.TypedFactory.create(value, model);
             }
         });
     };
 }
+exports["default"] = Typed;
